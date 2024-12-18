@@ -1,0 +1,36 @@
+## create a virtual env
+phython3 -m venv venv
+
+## activate virtual env
+Win:
+venv\Scripts\activate
+
+mac:
+source venv/bin/activate
+
+## install django
+python3 -m pip install django
+
+## create the project
+django-admin startproject config .
+
+## create requirements
+python3 -m pip freeze > requirements.txt
+
+
+#### create an app
+python3 manage.py startapp <NAME>
+
+
+#### Migrations
+every time you touch a model file, run:
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+
+
+#### TO RUN YOUR project
+## activate the virtual environment
+
+## start the server
+python3 manage.py runserver

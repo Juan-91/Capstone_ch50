@@ -1,0 +1,42 @@
+:root {
+    --primary-color-1: rgb(110, 197, 182);
+    --primary-color-2: rgb(31, 187, 161);
+
+    --secondary-color-1: rgba(153, 227, 171, 0.301);
+    --secondary-color-2: rgba(0, 0, 0, 0.605);
+
+    --text-color-1: rgb(175, 242, 239);
+    --text-color-2: rgb(31, 187, 161);
+    --text-color-3: rgba(0, 139, 139, 0.959);
+
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: var(--primary-color-1);
+}
+
+li {
+    margin: 5px;
+}
+
+body {
+    background-color: var(--secondary-color-1);
+}
+
+main {
+    min-height: calc(100vh - 104px);
+}
+
+footer {
+    background-color: var(--primary-color-1);
+    color: var(--secondary-color-2);
+    padding: 12px 0 12px 0;
+    text-align: center;
+}

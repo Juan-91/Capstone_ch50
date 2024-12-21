@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Me{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="about">
+    <img src="{% static 'images/prof.png' %}">
+    <h1>:: About Developer ::</h1>
+    <h2>Juan Montiel</h2>
+    <p> Proficient in programming languages such as C++, HTML,Python, CSS, JavaScript,
+        jQuery, Node.js, React. Mechatronic Engineer with expertise in robotics, automation, and embedded
+        systems, holding Linux+ and Security+ certifications. Served five years in the United States Marine
+        Corps as an Air Support Operations Operator, earning qualification as a Senior Instructor.
+        Demonstrates strong leadership, technical problem-solving, and instructional skills, with experience in
+        high-pressure operational environments and advanced system integration.
+    </p>
+</div>
+{% endblock content %}

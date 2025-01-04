@@ -1,0 +1,61 @@
+.signup {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid green;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color-2);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.signup h1 {
+    color: var(--secondary-color-2);
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.signup .helptext {
+    display: block;
+    color: white;
+
+}
+
+.signup label {
+    width: 110px;
+    text-align: right;
+}
+
+.signup button {
+    margin-top: 8px;
+
+}
+
+@media(max-width:767px) {
+
+    /* Rules for Mobiles */
+    .signup {
+        text-align: left;
+    }
+
+    .signup label {
+        display: block;
+        text-align: left;
+    }
+
+    .signup input {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .signup {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    /*Rules for Desktops only */
+}

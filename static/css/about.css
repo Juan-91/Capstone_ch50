@@ -9,14 +9,35 @@
     color: var(--text-color-2);
     margin-bottom: 0;
     margin-top: 12px;
+    text-align: center;
 }
 
 .about h2 {
     color: var(--text-color-3);
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.about p {
+    margin-bottom: 50px;
 }
 
 .about img {
     max-width: 100%;
     margin-left: 20px;
     border-radius: 10px;
+}
+
+@media(max-width:767px) {
+
+    /* Rules for Mobiles */
+
+    .about h1 {
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 75%;
+        margin-left: 50px;
+    }
 }

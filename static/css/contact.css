@@ -1,0 +1,44 @@
+.contact {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+.contact h1 {
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-color-3);
+
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    color: var(--text-color-2);
+
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-info button {
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 6px;
+    margin-left: 175px;
+    background-color: var(--secondary-color-2);
+    color: var(--text-color-2);
+}
+
+.contact-info div {
+    margin: 5px;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Contact Us {% endblock title %}
+{% load static %}
+
+{% block content %}
+<section class="contact">
+    <h1>Contact Us</h1>
+
+    <form id="email form" class="contact-info center-column" method="POST" action=".">
+        <div class="info">
+            {% csrf_token %}
+
+            <div class="one">
+                {{ form.name }}
+            </div>
+
+            <div class="one">
+                {{ form.email }}
+            </div>
+
+            <div class="one">
+                {{ form.message }}
+            </div>
+
+        </div>
+        <button class="btn-center">Send Message</button>
+
+    </form>
+</section>
+{% endblock content %}

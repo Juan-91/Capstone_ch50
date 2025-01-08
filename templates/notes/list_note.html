@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/notes' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="list-note">
+    <div class="head">
+        <h1>Your Notes</h1>
+        <a href="{% url 'create_note' %}" class="btn btn-outline-primary">Create New Note</a>
+    </div>
+
+    {# Node list #}
+
+    {% for note in note_list %}
+    <div class="note">
+        <h4>{{note.title}}</h4>
+        <label for="">{{note.created_on}}</label>
+        <p>{{note.text|truncatechars:100}}</p>
+
+        <a href="" class="btn btn-sm btn-outline-dark">View details</a>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

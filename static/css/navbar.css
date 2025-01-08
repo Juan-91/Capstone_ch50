@@ -1,0 +1,12 @@
+.navbar {
+    margin-top: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.navbar img {
+    max-width: 80px;
+    border-radius: 0px 0px 0px 10px;
+    margin-top: -13px;
+    margin-bottom: -13px;
+    margin-left: -13px;
+}

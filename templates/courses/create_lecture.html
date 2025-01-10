@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/create_lecture' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="update-lecture">
+    <h1>Create Topic</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-success" value="Create">
+    </form>
+</div>
+{% endblock content %}

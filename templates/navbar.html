@@ -28,45 +28,49 @@
                         href="{% url 'contact' %}">Contact Us</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
-                        href="{% url 'create_note' %}">Create Note</a>
-                </li>
-
                 <li>
                     <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
-                        href="{% url 'list_note' %}">Notes</a>
+                        href="{% url 'list_course' %}">Courses</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page" href="{% url 'new' %}">Create
-                        Course</a>
+                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
+                        href="{% url 'create_course' %}">Create Course</a>
+                </li>
 
                 <li class="nav-item">
-                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page" href="{% url 'list' %}">
-                        Courses</a>
+                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
+                        href="{% url 'list_lecture' %}">
+                        Topics</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
+                        href="{% url 'create_lecture' %}">
+                        Create Topic</a>
 
             </ul>
-            <div class="d-flex" role="login">
-                {% if user.is_authenticated %}
-                <div class="nav-item dropdown">
-                    <button class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{ user.username }}
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
-                    </ul>
+            <div class="login-dropdown">
+                <div class="d-flex" role="login">
+                    {% if user.is_authenticated %}
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{ user.username }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
+                    </div>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-outline-dark">Log In</a>
+                    {% endif %}
                 </div>
-                {% else %}
-                <a href="{% url 'login' %}" class="btn btn-outline-dark">Log In</a>
-                {% endif %}
             </div>
         </div>
     </div>

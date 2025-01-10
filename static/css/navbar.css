@@ -3,10 +3,22 @@
     border-radius: 0px 0px 10px 10px;
 }
 
+.navbar .login-dropdown {
+    margin-right: 60px;
+}
+
 .navbar img {
     max-width: 80px;
     border-radius: 0px 0px 0px 10px;
     margin-top: -13px;
     margin-bottom: -13px;
     margin-left: -13px;
+}
+
+@media(max-width:991px) {
+    /* botostrap responsive navbar*/
+
+    .navbar-nav {
+        padding-top: 10px !important;
+    }
 }

@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Course(models.Model):
     course= models.CharField(max_length=128)
+    students = models.ManyToManyField(User, related_name="assigned_courses", blank=True, null=True)
     def __str__(self):
         return self.course
 
@@ -16,3 +18,6 @@ class Lecture(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("detail_lecture", args=[self.id])

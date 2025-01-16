@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="details">
+    <h1>{{course.course}}</h1>
+    
+
+    {% for lecture in course.lectures.all %}
+        <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}<hr /></a>
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}

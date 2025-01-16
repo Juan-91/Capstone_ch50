@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="details">
+    <form method="post">
+        {% csrf_token %}
+    <h1>Are you sure to delete topic: {{lecture.title}}?</h1>
+
+    <p>{{lecture.body}}</p>
+    <button class="btn btn-outline-danger btn-sm">Yes, delete topic</button>
+    </form>
+    
+</div>
+
+{% endblock content %}

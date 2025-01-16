@@ -2,16 +2,25 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/create_course' %}">
+<link rel="stylesheet" href="{% static 'css/courses.css' %}">
 {% endblock css %}
 
 {% block content %}
+
 <div class="update-course">
     <h1>Create Course</h1>
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" class="btn btn-success" value="Create"">
+        <input type="submit" name="option" class="btn btn-success" value="Save"">
+        <input type="submit" name="option" class="btn btn-success" value="Save & Create Topic"">
+
+        
     </form>
 </div>
+
+
+<h1> Yeah right, you dont have permissions!</h1>
+
+
 {% endblock content %}

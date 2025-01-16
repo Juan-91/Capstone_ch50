@@ -9,24 +9,25 @@
 <div class="list-courses">
     <div class="head">
         <h1>Your Courses</h1>
+        {% if request.is_superuser %}
         <a href="{% url 'create_course' %}" class="btn btn-outline-primary">
             Create New Course</a>
         <a href="{% url 'create_lecture' %}" class="btn btn-outline-primary">
             Create New Topic</a>
+        {% endif %}
     </div>
 
     {# Course list #}
 
     {% for course in course_list %}
-    <div class="courses">
-        <h4>{{course.course}}</h4>
+    <div class="course-list">
+        <a class="courses1" href="{% url 'detail_course' course.id %}">{{course.course}}</a>
+        {% if request.is_superuser %}
+        <a class="btn btn-outline-info btn-sm" href="{% url 'update_course' course.id %}">Edit</a>
+        <a class="btn btn-outline-danger btn-sm" href="{% url 'delete_course' course.id %}">Delete</a>
+        {% endif %}
 
-        <hr />
-
-        {% for lecture in course.lectures.all %}
-        <h5>{{lecture.title}}</h5>
-        {% endfor %}
-
+        <hr>
     </div>
     {% endfor %}
 </div>

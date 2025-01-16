@@ -11,17 +11,22 @@
         <h1>Your Topics</h1>
         <a href="{% url 'list_course' %}" class="btn btn-outline-primary">
             All Courses</a>
+        
         <a href="{% url 'create_lecture' %}" class="btn btn-outline-primary">
             Create New Topic</a>
+            
+       
     </div>
 
     {# Course list #}
 
     {% for lecture in lecture_list %}
-    <div class="courses">
-        <h4>{{lecture.title}}</h4>
-        <hr />
-        <h5>{{lecture.course}}</h5>
+    <div class="courses2">
+
+        <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}</a>
+            <hr />
+            <h5>Course: {{lecture.course}}</h5>
+
 
     </div>
     {% endfor %}

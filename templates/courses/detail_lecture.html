@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/details.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="details">
+    <h1>Topics for {{course.course}}</h1>
+   
+    <h3>{{lecture.title}}<hr/></h3>
+    <p>{{lecture.body}}</p>
+</div>
+
+<a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'update_lecture' lecture.id %}">Edit</a>
+<a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'delete_lecture' lecture.id %}">Delete</a>
+
+{% endblock content %}

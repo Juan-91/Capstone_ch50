@@ -1,0 +1,11 @@
+.details{
+    color: var(--text-color-6);
+}
+
+.details h3, a {
+    color: var(--text-color-5);
+}
+
+.details P {
+    color: var(--text-color-4);
+}

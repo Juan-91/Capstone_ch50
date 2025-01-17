@@ -12,6 +12,9 @@
     --text-color-5: rgba(0, 62, 72, 0.729);
     --text-color-6: rgb(0, 63, 72);
 
+    --bk-color-1: rgb(37, 38, 40);
+    --bk-color-2: rgb(250, 226, 192);
+    --bk-color-3: rgb(224, 197, 219);
 }
 
 html,
@@ -38,8 +41,14 @@ main {
 }
 
 footer {
-    background-color: var(--primary-color-1);
+    max-height: 50px;
+    background-color: var(--bk-color-2);
     color: var(--secondary-color-2);
     padding: 12px 0 12px 0;
     text-align: center;
+}
+
+pre {
+    margin-top: 5px;
+    color: var(--bk-color-1);
 }

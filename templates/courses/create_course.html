@@ -6,6 +6,7 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_superuser %}
 
 <div class="update-course">
     <h1>Create Course</h1>
@@ -13,14 +14,14 @@
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" name="option" class="btn btn-success" value="Save"">
-        <input type="submit" name="option" class="btn btn-success" value="Save & Create Topic"">
+        <input type=" submit" name="option" class="btn btn-success" value="Save & Create Topic"">
 
         
     </form>
 </div>
 
-
+{% else %}
 <h1> Yeah right, you dont have permissions!</h1>
 
-
+{% endif %}
 {% endblock content %}

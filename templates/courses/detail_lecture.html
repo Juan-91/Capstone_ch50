@@ -8,12 +8,16 @@
 {% block content %}
 <div class="details">
     <h1>Topics for {{course.course}}</h1>
-   
-    <h3>{{lecture.title}}<hr/></h3>
+
+    <h3>{{lecture.title}}
+        <hr />
+    </h3>
     <p>{{lecture.body}}</p>
 </div>
 
+{% if user.is_superuser %}
 <a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'update_lecture' lecture.id %}">Edit</a>
 <a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'delete_lecture' lecture.id %}">Delete</a>
+{% endif %}
 
 {% endblock content %}

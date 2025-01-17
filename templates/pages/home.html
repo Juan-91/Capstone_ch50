@@ -9,10 +9,7 @@
 
 {% block content %}
 <div class="home">
-
-    <h1> Welcome to </h1>
-    <img src="{% static 'images/logo1.jpg' %}">
-
+    <img class="logo-img" src="{% static 'images/logo1.1.png' %}">
     <h2> What is Horus? </h2>
     <p>
         This is an online teaching platform that provides a flexible and interactive environment for educators to
@@ -25,5 +22,10 @@
         both instructors and learners.
     </p>
 
+    <img class="home-img" src="{% static 'images/home1.webp' %}">
+
+    {% if not user.is_superuser %}
+    <a class="d-flex btn btn-dark btn-outline-light" href="{% url 'signup' %}">Create Account</a>
+    {% endif %}
 </div>
 {% endblock %}

@@ -1,11 +1,18 @@
-.details{
+.details {
     color: var(--text-color-6);
 }
 
-.details h3, a {
-    color: var(--text-color-5);
+.details h3,
+a {
+    color: var(--text-color-3);
+    font-size: medium;
 }
 
 .details P {
-    color: var(--text-color-4);
+    color: rgba(255, 0, 0, 0.456);
+}
+
+.details h5 {
+    color: var(--text-color-5);
+    font-size: x-large;
 }

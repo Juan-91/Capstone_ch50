@@ -5,24 +5,29 @@
 <link rel="stylesheet" href="{% static 'css/details.css' %}">
 {% endblock css %}
 
+
 {% block content %}
+{% if user.is_superuser %}
+
 <div class="details">
     <form method="post">
         {% csrf_token %}
-    <h1>Are you sure to delete course: {{course.course}}?</h1>
-    
-    <p>All Topics with this course will be deleted as well!!!!</p>
-    <br>
+        <h1>Are you sure to delete course: {{course.course}}?</h1>
 
-    <h5>Topics</h5><hr>
-    {% for lecture in course.lectures.all %}
-    <h3>{{lecture.title}}</h3>
-    {% endfor %}
-    <br>
-    <button class="btn btn-outline-danger btn-sm">Yes, delete course and topics</button>
-    <a class="btn btn-outline-info btn-sm" href="{% url 'list_course' %}">Cancel</a>
+        <p><b>WARNING</b>: All Topics within this course will be deleted too!</p>
+        <br>
+
+        <h5>Topics</h5>
+        <hr>
+        {% for lecture in course.lectures.all %}
+        <h3>{{lecture.title}}</h3>
+        {% endfor %}
+        <br>
+        <button class="btn btn-outline-danger btn-sm">Yes, delete course and topics</button>
+        <a class="btn btn-outline-info btn-sm" href="{% url 'list_course' %}">Cancel</a>
     </form>
-    
+
 </div>
 
+{% endif %}
 {% endblock content %}

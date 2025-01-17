@@ -11,11 +11,11 @@
         <h1>Your Topics</h1>
         <a href="{% url 'list_course' %}" class="btn btn-outline-primary">
             All Courses</a>
-        
+        {% if user.is_superuser %}
         <a href="{% url 'create_lecture' %}" class="btn btn-outline-primary">
             Create New Topic</a>
-            
-       
+        {% endif %}
+
     </div>
 
     {# Course list #}
@@ -24,8 +24,8 @@
     <div class="courses2">
 
         <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}</a>
-            <hr />
-            <h5>Course: {{lecture.course}}</h5>
+        <hr />
+        <h5>Course: {{lecture.course}}</h5>
 
 
     </div>

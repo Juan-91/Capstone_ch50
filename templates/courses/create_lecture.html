@@ -6,6 +6,7 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_superuser %}
 
 <div class="update-lecture">
     <h1>Create Topic</h1>
@@ -16,4 +17,5 @@
     </form>
 </div>
 
+{% endif %}
 {% endblock content %}

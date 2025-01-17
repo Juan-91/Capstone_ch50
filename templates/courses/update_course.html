@@ -6,6 +6,7 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_superuser %}
 <div class="update-course">
     <h1>Edit Course</h1>
     <form method="POST">
@@ -14,4 +15,6 @@
         <input type="submit" class="btn btn-success" value="Update">
     </form>
 </div>
+
+{% endif %}
 {% endblock content %}

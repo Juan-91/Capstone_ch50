@@ -2,8 +2,12 @@ body {
     background-color: var(--bk-color-1);
 }
 
+nav {
+    box-shadow: 0 0 15px var(--bk-color-2);
+}
+
 .home {
-    max-width: auto;
+    max-width: 900px;
     padding-top: 30px;
     padding-bottom: 1px;
     margin-left: auto;
@@ -13,43 +17,45 @@ body {
 .logo-img {
     margin-top: 6%;
     margin-bottom: 3%;
-    margin-left: 36.5%;
+    margin-left: 23%;
     margin-right: 24%;
 }
 
 .home-img {
+    max-width: 100%;
     border-radius: 21px;
     margin-bottom: 50px;
-    margin-left: 22%;
-    margin-right: 22%;
+    margin-right: 10%;
 }
 
 
 .home h2 {
     color: rgba(220, 233, 230, 0.911);
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     text-align: center;
 }
 
 .home p {
     text-align: left;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: -10px;
+    margin-right: -10px;
     margin-bottom: 40px;
-    font-size: x-large;
+    font-size: large;
 }
 
 .home a {
     background-color: rgba(245, 245, 245, 0.301);
     color: var(--bk-color-2);
-    margin-left: 865px;
-    margin-right: 880px;
+    margin-left: 385px;
+    margin-right: 387px;
     display: block;
     margin-bottom: 40px;
-    text-align: center;
 }
 
+.home .btn {
+    box-shadow: 0 0 10px var(--bk-color-2);
+}
 
 
 @media(max-width:767px) {
@@ -59,4 +65,15 @@ body {
         max-width: 65%;
         margin-left: 50px;
     }
+}
+
+footer {
+    background-color: var(--bk-color-2);
+    box-shadow: 0 0 10px var(--bk-color-2);
+}
+
+pre {
+    margin-top: 5px;
+    color: var(--bk-color-1);
+    text-shadow: 0 0 5px var(--bk-color-1), 0 0 10px var(--bk-color-1), 0 0 15px var(--bk-color-1), 0 0 20px var(--bk-color-1), 0 0 25px var(--bk-color-1), 0 0 30px var(--bk-color-1), 0 0 35px var(--bk-color-1);
 }

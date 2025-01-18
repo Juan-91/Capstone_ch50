@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/courses.css' %}">
+<link rel="stylesheet" href="{% static 'css/edit.css' %}">
 {% endblock css %}
 
 {% block content %}
 {% if user.is_superuser %}
-<div class="update-course">
+<div class="edit">
     <h1>Edit Course</h1>
     <form method="POST">
         {% csrf_token %}

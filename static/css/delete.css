@@ -1,0 +1,33 @@
+.delete {
+    margin-top: 20px;
+    color: var(--text-color-6);
+}
+
+
+.delete p {
+    color: rgba(255, 0, 0, 0.456);
+}
+
+.delete h1 {
+    font-size: 36px;
+}
+
+.delete h5 {
+    color: var(--text-color-5);
+    font-size: 24px;
+}
+
+.delete h3 {
+    color: var(--text-color-3);
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.body-text p {
+    color: black;
+}
+
+.delete hr {
+
+    color: black;
+}

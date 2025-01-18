@@ -1,11 +1,14 @@
-
-
-.courses2 hr {
-    margin-top: 5px;
+.lists,
+.create {
+    margin-top: 20px;
 }
 
-h1{
+
+
+h1 {
     color: var(--text-color-6);
+    font-size: 36px;
+    margin-bottom: 25px;
 }
 
 
@@ -20,33 +23,49 @@ h4 {
     margin-top: 20px;
 }
 
-.update-lecture input {
-    margin-bottom: 20px;
-}
-
-.courses1{
+.courses1 {
     margin-left: auto;
     margin-right: auto;
     color: rgb(0, 63, 72);
     font-size: x-large;
 
 }
-.courses1 hr{
+
+.courses2 a {
+    color: var(--text-color-6);
+}
+
+.courses2 hr {
+    margin-top: 5px;
+}
+
+.courses1 hr {
     margin-top: -3px;
     margin-bottom: -6px;
 }
-.lectures1 hr{
+
+.lectures1 hr {
     margin-top: -1px;
     margin-bottom: -1px;
 }
 
-.courses2 a{
-    color: var(--text-color-6);
+.head {
+    margin-bottom: 15px;
 }
 
+.head .btn {
+    background-color: var(--bk-color-1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.head .btn:hover {
+    background-color: var(--bk-color-2);
+    border: 1px solid var(--bk-color-1);
+    box-shadow: 0 0 10px var(--bk-color-2);
+}
 
 .course-list .btn {
     font-size: 10px;
-    margin-left: 9px;
+    margin-left: 13px;
 }
-

@@ -1,10 +1,11 @@
 .navbar {
-    margin-top: 5px;
     border-radius: 0px 0px 10px 10px;
     background-image: url('/static/images/backgroundnav.jpg');
-    background-color: rgba(255, 255, 255, 0.5);
 }
 
+.d-flex {
+    color: var(--bk-color-2);
+}
 
 
 .navbar .login-dropdown {

@@ -8,7 +8,7 @@
 {% block content %}
 {% if user.is_superuser %}
 
-<div class="update-course">
+<div class="create">
     <h1>Create Course</h1>
     <form method="POST">
         {% csrf_token %}

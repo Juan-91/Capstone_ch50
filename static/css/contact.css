@@ -1,49 +1,52 @@
+body {
+    background-color: var(--bk-color-3);
+
+}
+
 .contact {
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     text-align: center;
 }
 
-
 .contact h1 {
     margin-top: 50px;
-    text-decoration: none;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--text-color-3);
-
-}
-
-.contact h2 {
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 3rem;
     letter-spacing: 0.06rem;
-    color: var(--text-color-2);
+    color: var(--bk-color-2);
 
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    display: block;
 }
 
+
 .contact-info button {
-    width: 150px;
+    width: 125px;
     margin-top: 5px;
     border-radius: 6px;
-    margin-left: 220px;
-    background-color: var(--secondary-color-2);
-    color: var(--text-color-2);
+    margin-left: 300px;
 }
+
+
 
 .contact-info div {
     display: flex;
-    flex-direction: block;
     flex-direction: column;
-    padding: 5px;
+    padding: 10px;
     border-radius: 9px;
-    background-color: var(--secondary-color-1);
+    background-color: var(--bk-color-4);
+}
+
+.contact button:hover {
+    background-color: var(--bk-color-2);
+}
+
+.contact .btn {
+    background-color: rgba(245, 245, 245, 0.301);
+    box-shadow: 0 0 10px var(--bk-color-2);
 }

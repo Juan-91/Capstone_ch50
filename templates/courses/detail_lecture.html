@@ -7,12 +7,12 @@
 
 {% block content %}
 <div class="details">
-    <h1>Topics for {{course.course}}</h1>
+    <h3>{{lecture.title}}</h3>
+    <hr />
+    <div class="body-text">
+        {{lecture.body|safe}}
+    </div>
 
-    <h3>{{lecture.title}}
-        <hr />
-    </h3>
-    <p>{{lecture.body}}</p>
 </div>
 
 {% if user.is_superuser %}

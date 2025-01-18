@@ -6,16 +6,16 @@
 {% endblock css %}
 
 {% block content %}
-<div class="list-courses">
+<div class="lists">
+
     <div class="head">
         <h1>Your Topics</h1>
-        <a href="{% url 'list_course' %}" class="btn btn-outline-primary">
+        <a href="{% url 'list_course' %}" class="btn btn-outline-light">
             All Courses</a>
         {% if user.is_superuser %}
-        <a href="{% url 'create_lecture' %}" class="btn btn-outline-primary">
+        <a href="{% url 'create_lecture' %}" class="btn btn-outline-light">
             Create New Topic</a>
         {% endif %}
-
     </div>
 
     {# Course list #}

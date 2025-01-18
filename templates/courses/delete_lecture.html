@@ -2,19 +2,22 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/details.css' %}">
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
 {% endblock css %}
 
 
 {% block content %}
 {% if user.is_superuser %}
-<div class="details">
+<div class="delete">
     <form method="post">
         {% csrf_token %}
         <h1>Are you sure to delete topic: {{lecture.title}}?</h1>
-
-        <p>{{lecture.body}}</p>
+        <hr>
+        <div class="body-text">
+            {{lecture.body|safe}}
+        </div>
         <button class="btn btn-outline-danger btn-sm">Yes, delete topic</button>
+        <a class="btn btn-outline-info btn-sm" href="{% url 'detail_lecture' lecture.id %}">Cancel</a>
     </form>
 
 </div>

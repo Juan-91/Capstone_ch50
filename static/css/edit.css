@@ -1,3 +1,9 @@
-.update-course h1{
+.edit {
+    margin-top: 20px;
+}
+
+.edit h1 {
     color: var(--text-color-6);
+    font-size: 36px;
+    margin-bottom: 40px;
 }

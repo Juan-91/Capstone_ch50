@@ -1,18 +1,24 @@
 .details {
+    max-width: 8000px;
+    margin-top: 20px;
     color: var(--text-color-6);
 }
 
-.details h3,
-a {
+.details h3 {
     color: var(--text-color-3);
-    font-size: medium;
-}
-
-.details P {
-    color: rgba(255, 0, 0, 0.456);
+    font-size: 36px;
 }
 
 .details h5 {
     color: var(--text-color-5);
     font-size: x-large;
+}
+
+.body-text {
+    max-width: 800px;
+}
+
+.details hr {
+
+    color: black;
 }

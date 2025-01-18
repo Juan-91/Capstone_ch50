@@ -2,31 +2,33 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/details.css' %}">
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
 {% endblock css %}
 
 
 {% block content %}
 {% if user.is_superuser %}
 
-<div class="details">
-    <form method="post">
-        {% csrf_token %}
-        <h1>Are you sure to delete course: {{course.course}}?</h1>
+<div class="details-delete">
+    <div class="delete">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Are you sure to delete course: {{course.course}}?</h1>
 
-        <p><b>WARNING</b>: All Topics within this course will be deleted too!</p>
-        <br>
+            <p><b>WARNING</b>: All Topics within this course will be deleted too!</p>
+            <br>
 
-        <h5>Topics</h5>
-        <hr>
-        {% for lecture in course.lectures.all %}
-        <h3>{{lecture.title}}</h3>
-        {% endfor %}
-        <br>
-        <button class="btn btn-outline-danger btn-sm">Yes, delete course and topics</button>
-        <a class="btn btn-outline-info btn-sm" href="{% url 'list_course' %}">Cancel</a>
-    </form>
-
+            <h5>Topics</h5>
+            <hr>
+            {% for lecture in course.lectures.all %}
+            <h4>{{lecture.title}}</h4>
+            <h3>Created: {{lecture.created_on}}</h3>
+            {% endfor %}
+            <br>
+            <button class="btn btn-outline-danger btn-sm">Yes, delete course and topics</button>
+            <a class="btn btn-outline-info btn-sm" href="{% url 'list_course' %}">Cancel</a>
+        </form>
+    </div>
 </div>
 
 {% endif %}

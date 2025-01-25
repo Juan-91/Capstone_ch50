@@ -85,9 +85,17 @@ pre {
 }
 
 .pre2 {
-    margin-top: 3px;
+    margin-top: 5px;
     color: var(--bk-color-1);
     text-shadow: 0 0 0px var(--bk-color-1), 0 0 6px var(--bk-color-1)
+}
+
+.pre2-terms {
+    margin-left: 950px;
+    font-size: x-small;
+    margin-top: 15px;
+    color: var(--bk-color-1);
+    text-shadow: 0 0 0px var(--bk-color-1), 0 0 6px var(--bk-color-1);
 }
 
 .icons {

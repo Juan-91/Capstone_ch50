@@ -6,6 +6,8 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <div class="details">
     <h3>{{lecture.title}}</h3>
     <hr />
@@ -18,6 +20,7 @@
 {% if user.is_superuser %}
 <a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'update_lecture' lecture.id %}">Edit</a>
 <a class="btn btn-light btn-outline-dark btn-sm" href="{% url 'delete_lecture' lecture.id %}">Delete</a>
-{% endif %}
 
+{% endif %}
+{% endif %}
 {% endblock content %}

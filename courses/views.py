@@ -17,7 +17,7 @@ class CourseCreateView(CreateView):
         option = form_data.get("option")
         if(option == "Save & Create Topic"):
             return reverse("create_lecture")
-
+        
         return reverse("list_course")
 
 class CourseListView(ListView):

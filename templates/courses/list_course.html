@@ -6,6 +6,8 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <div class="lists">
 
     <div class="head">
@@ -32,4 +34,6 @@
     </div>
     {% endfor %}
 </div>
+
+{% endif %}
 {% endblock content %}

@@ -40,3 +40,6 @@ def contact(request):
         form = ContactForm()
 
     return render(request, "pages/contact.html", {"form": form})
+
+def terms(request):
+    return render(request, 'pages/terms.html')

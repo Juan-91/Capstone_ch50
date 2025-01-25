@@ -10,7 +10,7 @@
 }
 
 .login h1 {
-    color: var(--primary-color-1);
+    color: var(--bk-color-2);
     text-align: center;
     margin-bottom: 22px;
 }
@@ -18,14 +18,40 @@
 .login .question {
     display: block;
     text-align: center;
-    color: rgb(39, 39, 39);
+    color: rgba(220, 233, 230, 0.911);
 }
 
-.login .signup-link {
-    color: black;
+.login .signup-link a {
+    color: var(--bk-color-2);
     text-align: center;
-    font-size: 18px;
 }
+
+.login .signup-link a:hover {
+    color: var(--bk-color-4);
+    text-align: center;
+}
+
+
+
+button {
+    background-color: var(--bk-color-1);
+    color: var(--bk-color-2);
+    margin-left: 250px;
+    margin-right: 387px;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px var(--bk-color-2);
+}
+
+button:hover {
+    background-color: var(--bk-color-2);
+    color: var(--bk-color-1);
+}
+
+.login {
+    box-shadow: 0 0 10px var(--bk-color-1);
+}
+
 
 @media(max-width:767px) {
 
@@ -41,6 +67,10 @@
     .signup input {
         width: 100%;
         padding: 5px;
+    }
+
+    .login .question {
+        margin-left: 200px;
     }
 
 }

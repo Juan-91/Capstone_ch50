@@ -3,6 +3,7 @@
     padding: 20px;
     background-image: url('/static/images/logo1.jpg');
     background-size: 100% 100%;
+    opacity: 100%;
     border: 2px solid var(--bk-color-2);
     border-radius: 6px;
     margin-left: auto;
@@ -12,15 +13,16 @@
 }
 
 
+
 .signup h1 {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(220, 233, 230, 0.911);
     text-align: center;
     margin-bottom: 22px;
 }
 
 .signup .helptext {
     display: block;
-    color: white;
+    color: rgba(220, 233, 230, 0.911);
     margin-top: 13px;
 }
 
@@ -31,8 +33,14 @@
 
 .signup button {
     margin-top: 8px;
-    background-color: var(--bk-color-2);
+    background-color: rgba(220, 233, 230, 0.911);
     color: var(--bk-color-1);
+    box-shadow: 0 0 10px rgba(220, 233, 230, 0.911);
+}
+
+.signup button:hover {
+    background-color: var(--bk-color-1);
+    color: rgba(220, 233, 230, 0.911);
 }
 
 @media(max-width:767px) {

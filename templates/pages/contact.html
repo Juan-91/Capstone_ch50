@@ -10,9 +10,8 @@
 
 {% block content %}
 <section class="contact">
-    <h1>Contact Us</h1>
-
-    <form id="email form" class="contact-info center-column" method="POST" action=".">
+    <img class="img" src="{% static 'images/contact1.png' %}">
+    <form id="email form" class="contact-info" method="POST" action=".">
         <div class="info">
             {% csrf_token %}
 
@@ -27,11 +26,9 @@
             <div class="one">
                 {{ form.message }}
             </div>
-
         </div>
 
         <button class="d-flex btn btn-dark btn-outline-light">Send Message</button>
-
     </form>
 </section>
 {% endblock content %}

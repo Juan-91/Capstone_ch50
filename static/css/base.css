@@ -3,7 +3,7 @@
     --primary-color-2: rgb(31, 187, 161);
 
     --secondary-color-1: rgba(153, 227, 171, 0.208);
-    --secondary-color-2: rgba(0, 0, 0, 0.605);
+    --secondary-color-2: rgba(0, 0, 0, 0.733);
 
     --text-color-1: rgb(175, 242, 239);
     --text-color-2: rgb(31, 187, 161);
@@ -14,8 +14,9 @@
 
     --bk-color-1: rgb(37, 38, 40);
     --bk-color-2: rgb(250, 226, 192);
-    --bk-color-3: rgba(105, 130, 135);
+    --bk-color-3: rgba(54, 54, 54);
     --bk-color-4: rgba(250, 226, 192, 0.653);
+    --bk-color-5: rgb(245, 246, 248);
 
 }
 
@@ -44,14 +45,34 @@ main {
 }
 
 footer {
-    max-height: 50px;
+    max-height: 100px;
     background-color: var(--bk-color-1);
     padding: 12px 0 12px 0;
     text-align: center;
+    margin-top: 15px;
+    margin-top: 15px;
 }
 
 pre {
     margin-top: 5px;
     color: var(--bk-color-2);
     text-shadow: 0 0 5px var(--bk-color-2), 0 0 10px var(--bk-color-2), 0 0 15px var(--bk-color-2), 0 0 20px var(--bk-color-2), 0 0 25px var(--bk-color-2), 0 0 30px var(--bk-color-2), 0 0 35px var(--bk-color-2);
+}
+
+a {
+    color: var(--bk-color-2);
+}
+
+.pre2 {
+    margin-top: 5px;
+    color: var(--bk-color-2);
+    text-shadow: 0 0 0px var(--bk-color-2), 0 0 6px var(--bk-color-2)
+}
+
+.icons {
+    max-height: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 20px;
 }

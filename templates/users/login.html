@@ -16,12 +16,11 @@
 
         {{ form.as_p }}
 
-        <button class="btn btn-primary">Login</button>
+        <button class="d-flex btn btn-dark btn-outline-light">Login</button>
     </form>
 
     <hr>
     <label class="question">Do you need an account?</label>
-    <label class="signup-link">Click <a href="{% url 'signup' %}">here to sign up</a></label>
-
+    <label class="signup-link"><a href="{% url 'signup' %}">Sign Up</a></label>
 </div>
 {% endblock content %}

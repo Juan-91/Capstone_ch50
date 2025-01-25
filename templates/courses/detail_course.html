@@ -6,15 +6,19 @@
 {% endblock css %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <div class="details">
     <h1>{{course.course}}</h1>
-    
+
 
     {% for lecture in course.lectures.all %}
-        <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}<hr /></a>
+    <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}
+        <hr />
+    </a>
     {% endfor %}
 </div>
 
 
-
+{% endif %}
 {% endblock content %}

@@ -1,10 +1,16 @@
 .navbar {
+    height: 73px;
     border-radius: 0px 0px 10px 10px;
     background-image: url('/static/images/backgroundnav.jpg');
 }
 
 .d-flex {
     color: var(--bk-color-2);
+    margin-top: 5px;
+}
+
+.d-flex {
+    box-shadow: 0 0 10px var(--bk-color-1);
 }
 
 

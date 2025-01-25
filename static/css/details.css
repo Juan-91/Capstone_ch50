@@ -22,3 +22,7 @@
 
     color: black;
 }
+
+a {
+    color: var(--text-color-3);
+}

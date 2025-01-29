@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 
@@ -7,6 +8,8 @@ from ckeditor.fields import RichTextField
 class Course(models.Model):
     course= models.CharField(max_length=128)
     students = models.ManyToManyField(User, related_name="assigned_courses", blank=True, null=True)
+    enrollkey = models.CharField(max_length=20, blank=True, null=True)
+
     def __str__(self):
         return self.course
 

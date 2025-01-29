@@ -4,6 +4,8 @@ from django.urls import reverse
 from .forms import CourseForm, LectureForm
 from .models import Course, Lecture
 from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect
+
 
 
 
@@ -23,6 +25,7 @@ class CourseCreateView(CreateView):
 class CourseListView(ListView):
     template_name = "courses/list_course.html"
     model = Course
+   
 
     # force django to load the lectures of each course
     def get_queryset(self):
@@ -30,10 +33,23 @@ class CourseListView(ListView):
     
 class CourseDetailView(DetailView):
     template_name = "courses/detail_course.html"
-    model = Course
-
+    model = Course 
+    
     def get_queryset(self):
        return super().get_queryset().prefetch_related('lectures')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)        
+        course_id = context["course"].id
+        user_courses = self.request.user.assigned_courses.all()
+        enrolled = False
+        
+        for course in user_courses:
+            if course.id == course_id:
+                enrolled = True
+
+        context["enrolled"] = enrolled
+        return context
 
 class CourseUpdateView(UpdateView):
     template_name = "courses/update_course.html"
@@ -42,6 +58,7 @@ class CourseUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse("list_course")
+    
 
 class CourseDeleteView(DeleteView):
     template_name = "courses/delete_course.html"
@@ -90,3 +107,18 @@ class LectureDeleteView(DeleteView):
 
     def get_success_url(self) -> str:
         return reverse('list_lecture')
+    
+
+
+
+def enroll_user_course(request):
+    data = request.POST
+    course_id = data.get("course_id")
+    password = data.get("password")
+
+    course = Course.objects.get(id=course_id)
+    if course.enrollkey == password:
+        course.students.add(request.user)
+        return redirect("detail_course",pk=course_id)
+    else:
+        return redirect("detail_course")

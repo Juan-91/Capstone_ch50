@@ -23,6 +23,43 @@
     color: black;
 }
 
-a {
+
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.enroll-form {
+    background-color: var(--bk-color-1);
+    color: var(--text-color-1);
+    border: 2px solid var(--bk-color-2);
+    border-radius: 6px;
+    padding: 5px;
+    text-align: center;
+    width: 40%;
+    align-items: center;
+}
+
+.enroll-form h5 {
+    color: var(--bk-color-2);
+    margin-top: 30px;
+}
+
+.list-course {
+    background-color: var(--bk-color-2);
+    color: var(--bk-color-1);
+    margin-top: 20px;
+    width: 30%;
+    padding: 15px;
+    border-left: 1px solid lightslategray;
+    border-bottom: 1px solid lightslategray;
+    border-radius: 6px;
+
+}
+
+.lectures1 {
     color: var(--text-color-3);
 }

@@ -11,8 +11,13 @@
 <div class="lists">
 
     <div class="head">
-        <h1>Your Courses</h1>
+        {% if not user.is_superuser %}
+        <h1>Courses</h1>
+        {% endif %}
+
+
         {% if user.is_superuser %}
+        <h1>Your Courses</h1>
         <a href="{% url 'create_course' %}" class="btn btn-dark btn-outline-light">
             Create New Course</a>
         <a href="{% url 'create_lecture' %}" class="btn btn-outline-light">

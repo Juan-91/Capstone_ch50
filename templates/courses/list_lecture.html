@@ -8,10 +8,20 @@
 {% block content %}
 {% if user.is_authenticated %}
 
+
+
 <div class="lists">
 
     <div class="head">
+
+        {% if not user.is_superuser %}
+        <h1>Topics</h1>
+        {% endif %}
+
+        {% if user.is_superuser %}
         <h1>Your Topics</h1>
+        {% endif %}
+
         <a href="{% url 'list_course' %}" class="btn btn-outline-light">
             All Courses</a>
         {% if user.is_superuser %}
@@ -22,14 +32,12 @@
 
     {# Course list #}
 
-    {% for lecture in lecture_list %}
-    <div class="courses2">
 
+    <div class="courses2">
+        {% for lecture in lecture_list %}
         <a class="lectures1" href="{% url 'detail_lecture' lecture.id %}">{{lecture.title}}</a>
         <hr />
         <h5>Course: {{lecture.course}}</h5>
-
-
     </div>
     {% endfor %}
 </div>

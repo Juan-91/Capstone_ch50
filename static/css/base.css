@@ -78,6 +78,7 @@ a {
 }
 
 .icons {
+    color: var(--bk-color-2);
     max-height: 15px;
     display: flex;
     flex-direction: row;

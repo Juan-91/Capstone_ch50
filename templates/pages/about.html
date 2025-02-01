@@ -9,15 +9,31 @@
 
 {% block content %}
 <div class="about">
-    <h1> About Developer </h1>
-    <img src="{% static 'images/prof.png' %}">
-    <h2> Juan Montiel </h2>
-    <p> Proficient in programming languages such as C++, HTML,Python, CSS, JavaScript,
-        jQuery, Node.js, React. Mechatronic Engineer with expertise in robotics, automation, and embedded
-        systems, holding Linux+ and Security+ certifications. Served five years in the United States Marine
-        Corps as an Air Support Operations Operator, earning qualification as a Senior Instructor.
-        Demonstrates strong leadership, technical problem-solving, and instructional skills, with experience in
-        high-pressure operational environments and advanced system integration.
-    </p>
+    <h1> About Horus Platform</h1>
+    <div class="o-courses">
+        <div>
+            <img src="{% static 'images/ocourses.jpg' %}">
+        </div>
+        <div>
+            <p>A courses platform is an online system that provides access to educational content, allowing users to
+                learn new skills, gain certifications, or advance their knowledge in various fields. This platforms
+                offer diverse courses, often featuring video lectures, interactive assignments, quizzes, and discussion
+                forums. They cater to students, professionals, and hobbyists, enabling flexible learning at their own
+                pace.
+            </p>
+        </div>
+    </div>
+    <div class="o-teaching">
+        <div>
+            <p> A platform that enables educators to create, manage, and deliver lessons to students in a structured and
+                interactive manner. These platforms provide tools for video lectures, live classes, quizzes,
+                assignments, and student engagement through forums or chat features. They cater to schools,
+                universities, and independent instructors, offering flexibility for both in-person and remote learning.
+            </p>
+        </div>
+        <div>
+            <img src="{% static 'images/oteaching.png' %}">
+        </div>
+    </div>
 </div>
 {% endblock content %}

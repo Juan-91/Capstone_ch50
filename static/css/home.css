@@ -36,6 +36,8 @@ a {
     border-radius: 21px;
     margin-bottom: 50px;
     margin-right: 10%;
+    box-shadow: 0 0 10px var(--bk-color-2);
+
 }
 
 

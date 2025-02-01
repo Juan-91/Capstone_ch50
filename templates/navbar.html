@@ -32,7 +32,8 @@
                     <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
                         href="{% url 'list_course' %}">Courses</a>
                 </li>
-
+                {% endif %}
+                {% if user.is_superuser %}
                 <li class="nav-item">
                     <a class="d-flex btn btn-dark btn-outline-light" aria-current="page"
                         href="{% url 'list_lecture' %}">Topics</a>
